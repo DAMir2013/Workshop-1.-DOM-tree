@@ -105,9 +105,20 @@ function updateContent() {
             // получаю класс родителя кнопки на котрой произошло событиеб из него извлекаю часть в которой храниться номер позиции в массиве data, привожу его к числу
             const positionDeleteElem = Number(e.target.closest('div').classList.value.slice(6));
             // получаю и сохраняю новый заголовок для статьи
-            const titleNewValue = prompt("Введите  заголовок для новой статьи");
+            let titleNewValue = prompt("Введите  заголовок для новой статьи");
+            // Проверяю на пустую строку
             // получаю и сохраняю новый текст статьи
-            const articleNewValue = prompt("Введите  содержание новой статьи");
+            while (titleNewValue === '') {
+                alert('Название не может быть пустым');
+                titleNewValue = prompt("Введите  заголовок для новой статьи");
+            }
+
+            let articleNewValue = prompt("Введите  содержание новой статьи");
+            // Проверяю на пустую строку
+            while (articleNewValue === '') {
+                alert('Статья не может быть пустой');
+                articleNewValue = prompt("Введите  содержание новой статьи");
+            }
 
             //сохраняю эти значения в массиве 
             data[positionDeleteElem].title = titleNewValue;
