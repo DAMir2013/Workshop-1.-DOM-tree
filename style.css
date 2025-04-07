@@ -1,0 +1,17 @@
+.deleteBtn {
+    color: white;
+    background-color: red;
+    margin-left: 5px;
+}
+
+.changeBtn {
+    background-color: yellow;
+    margin-left: 5px;
+}
+
+
+.addArticle {
+    background-color: blue;
+    color: white;
+    margin-top: 15px;
+}
